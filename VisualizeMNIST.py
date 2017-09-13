@@ -15,7 +15,7 @@ def main():
     offset = struct.calcsize(fmt)
     
     if not os.path.exists(dump_path):
-        os.mkdirs(dump_path)
+        os.makedirs(dump_path)
 
     for i in xrange(num):
         image_size = row * col
