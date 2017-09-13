@@ -1,6 +1,7 @@
 import gzip
 import struct
 from PIL import Image
+import os
 
 input_path = "./Mnist_data/train-images-idx3-ubyte.gz"
 dump_path = "./VisualizedData/"
@@ -13,6 +14,9 @@ def main():
     print magic, num, row, col
     offset = struct.calcsize(fmt)
     
+    if not os.path.exists(dump_path):
+        os.mkdirs(dump_path)
+
     for i in xrange(num):
         image_size = row * col
         fmt_img = '>%sB' % image_size
