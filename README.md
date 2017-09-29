@@ -1,1 +1,1 @@
-# this repo includes scripts about Deep Learning implemented by tensorflow
+# This repo includes scripts about Deep Learning implemented by tensorflow
